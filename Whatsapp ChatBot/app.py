@@ -37,7 +37,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    return "I'm alive!"
 
 @app.route("/sms", methods=['POST'])
 
@@ -60,21 +60,21 @@ def sms_reply():
         message = client.messages.create(
                                     body=f'{sms}',
                                     from_='whatsapp:+14155238886',
-                                    to='whatsapp:+918969542193'
+                                    to='whatsapp:+98xxxx41'
                                 )
 
         print(message.sid)
 
 
     def send_media(media):
-        account_sid = 'ACb4c5b72db166a775d609ed9b40e525e3'
-        auth_token = '97a28d3fb683b83f67b22aab5d56bb1d'
+        account_sid = 'XXXXXXXXXXXXX'
+        auth_token = 'XXXXXXXXXXXXX'
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
                                     media_url=f"{media}",
-                                    from_='whatsapp:+14155238886',
-                                    to='whatsapp:+918969542193'
+                                    from_='whatsapp:+XXXXXXX',
+                                    to='whatsapp:+XXXXXXXXX'
                                 )
 
         print(message.sid)
