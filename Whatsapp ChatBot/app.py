@@ -53,8 +53,8 @@ def sms_reply():
     resp = MessagingResponse()
     
     def send_msg(sms):
-        account_sid = 'ACb4c5b72db166a775d609ed9b40e525e3'
-        auth_token = '97a28d3fb683b83f67b22aab5d56bb1d'
+        account_sid = 'ACb4c5XXXXXXXXXXXXXXXX'
+        auth_token = '97a2XXXXXXXXXXXXXXXX'
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
